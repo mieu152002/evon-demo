@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="loginMain.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <title>Đăng nhập</title>
+    </head>
+
+    <body>
+        <div class="header"> <!-- block -->
+            <!-- element -->
+            <div class="header__logo">
+                <div class="header__navbar">
+                    <a href="" class="header__link">
+                        <img class="header__link-img" src="https://fs-03.web4s.vn/uploads/plugin/setting/3/i-n-may-logo.png" alt="" >
+                    </a>
+                </div>
+            </div>
+
+            <div class="header__with-search">
+                <div class="header__search">
+                    <input class="header__search-input" placeholder="Từ khóa tìm kiếm" type="text">
+                    <button class="header__search-btn">
+                        <i class="menu-top__search-btn__icon fa-solid fa-magnifying-glass"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="header__menu">
+                <div class="header__feature ">
+                    <div class="header__feature-block ">
+                        <a href="" class="header__link">
+                            <i class="header__feature__icon fa-regular fa-user"></i>
+                        </a>
+
+                    </div>
+                    <div class="header__feature-block">
+                        <a href="" class="header__link">
+                            <i class="header__feature__icon fa fa-shopping-basket"></i>
+                        </a>
+
+                    </div>
+
+
+                    <div onclick="itemListDisplay()" class="header__feature-block">
+                        <div id="header__link" class="header__link">
+                            <i class="header__feature__icon fa fa-align-right"></i>
+                            
+                            <!-- menu -->
+                            <div id="link__all-all" class="header__link__all-all">
+                                <div class="backgrourd"></div>
+
+                                <div class="header__link__all">
+                                    <div class="link__all-row">
+                                        <div class="link__all-grid">
+                                            <!--  -->
+                                            <div class="link__all__header">
+                                                <div onclick="closeItemList()" id="closeItemList" class="all__header-icon">
+                                                    <i class="all__header-icon-cloes fa-solid fa-xmark"></i>
+                                                </div>
+                                                
+                                                <div class="all__laguegee">
+                                                    <div class="all__language">
+                                                        <!-- việt nam -->
+                                                        <div class="all__language-main">
+                                                            <div class="all__language-vietnam">
+                                                                <img class="all__language-img" src="https://fs-03.web4s.vn/uploads/plugin/language/4/viet-nam-flag-vi.jpg" alt="">
+                                                            </div>
+                                                            <div class="all__language-name">
+                                                                <p class="all__language-proper">Việt Nam</p>
+                                                            </div>
+                                                            <div class="all__language-cloes">
+                                                                <i class="all__language-icon fa fa-caret-down"></i>
+                                                            </div>
+            
+                                                        </div>
+                                                        <!-- english -->
+                                                        <!-- <div class="all__languge-next">
+                                                            <div class="all__languge-now">
+                                                                <div class="all__languge-english">
+                                                                    <img class="all__language-img" src="https://fs-03.web4s.vn/uploads/plugin/language/4/viet-nam-flag-vi.jpg" alt="">
+                                                                </div>
+                                                                <div class="all__languge-nema">
+                                                                    <p class="all__languge-properr">English</p>
+                                                                </div>
+    
+                                                            </div>
+                                                        </div> -->
+                                                    </div>
+
+                                                </div>
+                                            </div>
+        
+                                            <!-- container -->
+                                            <div class="link__all__container">
+                                                <div class="all__header-heading">
+                                                    <h2 class="all__header-main">Menu chính</h2>
+                                                </div>
+                                                <ul class="all__container__list">
+                                                    <li class="all__container__item">
+                                                        <a href="" class="all__container__item-link">Trang chủ</a>
+                                                    </li>
+                                                    <li class="all__container__item">
+                                                        <a href="" class="all__container__item-link">Túi xách</a>
+                                                        <i class="fa fa-caret-down"></i>
+                                                    </li>
+                                                    <li class="all__container__item">
+                                                        <a href="" class="all__container__item-link">Balo</a>
+                                                        <i class="fa fa-caret-down"></i>
+                                                    </li>
+                                                    <li class="all__container__item">
+                                                        <a href="" class="all__container__item-link">Giới thiệu</a>
+                                                    </li>
+                                                    <li class="all__container__item">
+                                                        <a href="" class="all__container__item-link">Tin tức</a>
+                                                        <i class="fa fa-caret-down"></i>
+                                                    </li>
+                                                    <li class="all__container__item">
+                                                        <a href="" class="all__container__item-link">Liên hệ</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+        
+                                            <!-- footer -->
+                                            <footer class="footer">
+                                                <div class="footer__header">
+                                                    <p class="footer__header-main">
+                                                        Theo dõi chúng tôi
+                                                    </p>
+                                                </div>
+        
+                                                <div class="footer__follow">
+                                                    <div class="footer__follow-container">
+                                                        <div class="footer__follow-block">
+                                                            <a href="https://www.facebook.com/haduong.nguyen.3388/" class="footer__follow-link">
+                                                                <i class="footer__follow-link-icon fa-brands fa-facebook-square"></i>
+                                                            </a>
+                                                        </div>
+                                                        <div class="footer__follow-block">
+                                                            <a href="" class="footer__follow-link">
+                                                                <i class="footer__follow-link-icon fa-brands fa-twitter"></i>
+                                                            </a>
+                                                        </div>
+                                                        <div class="footer__follow-block">
+                                                            <a href="" class="footer__follow-link">
+                                                                <i class="footer__follow-link-icon fa-brands fa-google-plus-g"></i>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </footer>
+                                        </div>
+                                    </div>
+        
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        
+        <div class="header--boder"></div>
+
+        <!-- sigin -->
+        <div class="box-sigin">
+            <div class="box-sigin-grid">
+                <div class="box-sigin__homePage">
+                    <a href="" class="homePage__link">
+                        <p class="homePage__link-text">Trang chủ</p>
+                    </a>
+                </div>
+                <div class="box-sigin__login">
+                    <i class="homePage__link-icon fa-solid fa-angle-right"></i>
+                    <p class="homePage__link-login">Đăng nhập</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- login -->
+        <div class="box-login">
+            <div class="box-login__grid">
+                <div class="box-login__header">
+                    <h4 class="box-login__text">ĐĂNG NHẬP</h4>
+                </div>
+
+                <div class="box-login__background"></div>
+
+                <!-- login group -->
+                <div class="box-login__group">
+                    <div class="box-login__from">
+
+                        <div class="box-login__item">
+                            <p class="box-login-text">Tên đăng nhập</p>
+                            <input type="text" placeholder="Tên đăng nhập hoặc email" class="box-login-input">
+                        </div>
+
+                        <div class="box-login__item">
+                            <p class="box-login-text">Mật khẩu</p>
+                            <input type="text" placeholder="Mật khẩu" class="box-login-input">
+                        </div>
+
+                        <div class="box-login__item">
+                            <div class="box-login__btn">
+                                <button class="box-login__btn-login">
+                                <div class="box-login__btn-background"></div>
+                                <i class="box-login-icon fa-solid fa-right-to-bracket"></i>
+                                    ĐĂNG NHẬP
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="box-login__item">
+                            <div class="box-login__item-app">
+                                <div class="box-login__link">
+                                    <div class="box-login__facebook">
+                                        <div class="box-login__facebook-link">
+                                            <i class="box-login__link-icon fa-brands fa-facebook-f"></i>
+                                            <p class="box-login__link-text">Đăng nhập bằng facebook</p>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="box-login__link">
+                                    <div class="box-login__google">
+                                        <div class="box-login__google-link">
+                                            <i class="box-login__link-icon fa-brands fa-google"></i>
+                                            <p class="box-login__link-text">Đăng nhập bằng google</p>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="box-login__item">
+                            <div class="box-login__creact">
+                                <a href="" class="box-login__creact-link">
+                                    Đăng ký tài khoản
+                                </a>
+                                <!-- <div class="box-login__no-creact"></div> -->
+                                <a href="" class="box-login__creact-link">
+                                    Quên mật khẩu
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        
+        <!-- footer -->
+        <div class="footer__login">
+            <div class="footer__login-grid">
+                <div class="footer__login-row">
+                    <div class="login-grid__row8">
+                        <a href="" class="login-grid__link">
+                            <img src="slider-5.jpg" alt="" class="login-grid__img">
+                        </a>
+                        <ul class="login-grid__form">
+                            <li class="login-grid__item">
+                                <a href="" class="login-grid__link">Về chúng tôi</a>
+                            </li>
+                            <li class="login-grid__item">
+                                <a href="" class="login-grid__link">Liên hệ</a>
+                            </li>
+                            <li class="login-grid__item">
+                                <a href="" class="login-grid__link">FAQS</a>
+                            </li>
+                            <li class="login-grid__item">
+                                <a href="" class="login-grid__link">Tuyển dụng</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="login-grid__row4">
+                            <p class="banquyen">Copyright by vanmanh152002.com</p>
+                        <a href="" class="grid__icon-link">
+                            <i class="fa-brands fa-facebook-square"></i>
+                        </a>
+                        <a href="" class="grid__icon-link">
+                            <i class="fa-brands fa-google-plus-g"></i>
+                        </a>
+                        <a href="" class="grid__icon-link">
+                            <i class="fa-brands fa-twitter"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script src="main.js"></script>
+</html>
